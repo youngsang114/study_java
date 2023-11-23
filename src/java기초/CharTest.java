@@ -1,3 +1,5 @@
+package java기초;
+
 public class CharTest {
     public static void main(String[] args) {
         // ‘가’라는 한글 한 문자를 변수에 저장하고 출력하시요

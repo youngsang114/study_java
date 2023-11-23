@@ -1,3 +1,5 @@
+package java기초;
+
 public class VDATest {
     public static void main(String[] args) {
         // 프로그래밍에 3대 요소 -> 변수(V),자료형(D),할당(A)

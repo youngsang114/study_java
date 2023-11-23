@@ -1,3 +1,5 @@
+package java기초;
+
 public class BinaryTest {
     public static void main(String[] args) {
         int decimal = 69;

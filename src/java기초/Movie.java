@@ -1,3 +1,5 @@
+package java기초;
+
 public class Movie {
     public String title;
     public long date;

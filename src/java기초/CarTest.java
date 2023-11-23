@@ -1,3 +1,5 @@
+package java기초;
+
 public class CarTest {
     public static void main(String[] args) {
         // 자동차의 정보를 저장 하려고 한다 변수를 만들어 보시요.

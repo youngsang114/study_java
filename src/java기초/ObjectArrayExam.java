@@ -1,3 +1,5 @@
+package java기초;
+
 public class ObjectArrayExam {
     public static void main(String[] args) {
         // 영화 3 편을 저장 할 [배열을 생성하고], 영화 편의 데이터를 저장하고 출력하세요

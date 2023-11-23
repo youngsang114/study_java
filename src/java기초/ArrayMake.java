@@ -1,3 +1,5 @@
+package java기초;
+
 public class ArrayMake {
     public static void main(String[] args) {
         // 정수 5개를 저장 할 배열을 생성 하시오

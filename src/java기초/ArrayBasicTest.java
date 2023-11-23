@@ -1,3 +1,5 @@
+package java기초;
+
 public class ArrayBasicTest {
     public static void main(String[] args) {
         // 정수 3개를 저장 할 변수를 선언하고 모두 10을 저장하세요

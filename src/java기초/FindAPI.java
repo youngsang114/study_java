@@ -1,3 +1,5 @@
+package java기초;
+
 public class FindAPI {
     public static void main(String[] args) {
         int a; // 변수 선언

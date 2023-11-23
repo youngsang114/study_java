@@ -1,3 +1,5 @@
+package java기초;
+
 public class TwoDimArrayTest {
     // 2차원 이상 차원 배열 -> "다차원 배열"
     public static void main(String[] args) {
