@@ -1,6 +1,6 @@
 package yalc_java.sec05.chap01.ex03;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
         //  클래스로 인스턴스를 생성 - 💡 new 연산자 + 생성자 호출
         //  본사의 방침대로 매장을 내는 것

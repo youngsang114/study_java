@@ -1,6 +1,6 @@
 package yalc_java.sec05.chap01.ex01;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
         Button button1 = new Button('1', 1, "DARK");
         Button buttonPlus = new Button('+', 3, "DARK");

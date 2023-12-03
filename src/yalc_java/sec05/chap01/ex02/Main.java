@@ -1,6 +1,6 @@
 package yalc_java.sec05.chap01.ex02;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
         //  본사 소속의 매장을 내는 코드
         YalcoChicken store1 = new YalcoChicken();
