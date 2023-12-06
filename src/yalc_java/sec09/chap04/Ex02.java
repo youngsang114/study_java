@@ -64,7 +64,7 @@ public class Ex02 {
         // 음, new로 인스턴스 생성 안하는거 보니까 static 메서드겠네~
         // builder하나 선언 하고
         // accept()메서드로 추가한다음에
-        // 객체에.builder() 메서드로 Stream으로 만들어준다
+        // 객체에.build() 메서드로 Stream으로 만들어준다
         Stream.Builder<Character> builder = Stream.builder();
         builder.accept('스');
         builder.accept('트');
