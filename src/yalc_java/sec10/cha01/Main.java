@@ -1,4 +1,4 @@
-package yalc_java.sec10;
+package yalc_java.sec10.cha01;
 
 public class Main {
     public static void main(String[] args) {
@@ -22,5 +22,6 @@ public class Main {
             e.printStackTrace(); // 🔴
         }
         System.out.println("예외를 try문으로 감쌌을 때 2");
+
     }
 }
