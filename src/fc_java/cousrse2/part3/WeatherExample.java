@@ -11,7 +11,7 @@ import java.net.URL;
 
 public class WeatherExample {
     public static void main(String[] args) {
-        String apiKey ="0316f720c02e71b525eb7a952033dba6";
+        String apiKey ="너의 api키를 적어보렴";
         String city = "Seoul";
         String urlString ="너의 Api를 적어보렴";
 
