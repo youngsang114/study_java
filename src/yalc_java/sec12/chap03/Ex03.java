@@ -11,7 +11,7 @@ public class Ex03 {
                 DataOutputStream dos = new DataOutputStream(fos);
         ) {
 
-            //  💡 각 자료형의 값을 이진 데이터로 저장
+            //  💡 각 자료형의 값을 [이진 데이터]로 저장
             dos.writeBoolean(true);
             dos.writeInt(123);
             dos.writeDouble(3.14);
@@ -33,8 +33,8 @@ public class Ex03 {
         ) {
 
             //  ⭐️ 쓴 순서와 같이 읽어야 함
-            //  - 순서를 바꿔 볼 것
-            //  - 오류가 나거나, 바뀐 곳들의 값이 잘못 읽힘
+            //  - [순서를 바꿔] 볼 것
+            //  - 오류가 나거나, 바뀐 곳들의 값이 [잘못 읽힘]
             //    - 문자열 이전 것들끼리 바꿔보기
             //    - 문자열을 다른 위치로 옮겨보기
             read1 = dis.readBoolean();

@@ -43,13 +43,15 @@ public class Ex01 {
     public static void fileInputStrmEx2 () {
 
         //  ⭐️ 인코딩 설정 - UTF-8
+        // Charset , StandardCharsets 클래스를 이용해 인코딩을 설정해준다
         Charset charset = StandardCharsets.UTF_8;
 
         try (
                 FileInputStream fis = new FileInputStream(SONG_PATH);
 
-                //  💡 [InputStreamReader] : [바이트 스트림을] [문자열 스트림]으로
+                //  💡 [InputStreamReader] : [바이트 스트림을] -> [문자열 스트림]으로
                 //  - 인코딩 적용 등에 사용
+                // new InputStreamReader(FileInpustStream 인스턴스, Charset 인스턴스)
                 InputStreamReader isr = new InputStreamReader(fis, charset)
         ) {
             int readByte;
@@ -65,7 +67,8 @@ public class Ex01 {
 
         //  💡 [버퍼를] 사용
         //  - 하나씩 손에 들고 오는 게 아니라 [바구니에 담아옴]
-        //  - 1바이트씩 받아올 때보다는 [효율적]
+        //  - 1바이트씩 받아올 때보다는 [효율적] -> read()는 한바이트씩 읽어왔다... 비 효율적이였음
+        // byte의 배열형태를 생성함 -> 배열도 Objcect이니까 new로 인스턴스 생성하기!
         byte[] buffer = new byte[1024]; // 바이트 1024개가 담기는 🧺 바구니
 
         Charset charset = StandardCharsets.UTF_8;
@@ -75,9 +78,10 @@ public class Ex01 {
             int count = 0;
 
             //  bytes[]를 인자로 넣을 시 그 용량만큼 받아옴
-            while ((readByte = fis.read(buffer)) != -1) {
+            while ((readByte = fis.read(buffer)) != -1) { // read에 byte[] 배열을 넣어줘서, 한번에 그 배열 개수 만큼 바이트로 받아옴
 
                 //  💡 byte[]로부터 지정된 범위와 인코딩의 문자열 생성
+                // 아까는 1바이트씩 받아서 char readChar 이렇게 했지만,,, 이제는 String으로(배열, 어디서 시작, 어디까지, 인코딩 인스턴스)
                 String readStr = new String(
                         buffer, 0, readByte, charset
                 );
@@ -104,7 +108,8 @@ public class Ex01 {
                 //  💡 BufferedInputStream
                 //  - 내부에 [버퍼를] 가짐 (기본 8192 바이트)
                 //    - 🚚 트럭에 실어옴
-                //  - FileInputStream을 생성자 인자로 받음
+                //  BufferedInputStream의 인자로, FileInputStream을 생성자 인자로 받음
+                // new BufferedInputStream(new FileInputStream(path), 원하는 크기)
                 BufferedInputStream bis = new BufferedInputStream(
                         new FileInputStream(SONG_PATH)
                         //, 4096 // 또는 원하는 크기 지정 가능

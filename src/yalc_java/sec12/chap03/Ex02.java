@@ -3,6 +3,7 @@ package yalc_java.sec12.chap03;
 import java.io.*;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Arrays;
@@ -37,6 +38,9 @@ public class Ex02 {
         ) {
             for (String line : lines) {
                 //  🧺 바구니에 담아 🚚 트럭에 싣고 가져다주기
+                // 한줄한줗을 바이트의 배열에 담기
+                // getBytes로 문자열의 배열을 바이트의 배열로 반환하기(인코딩)
+                // write(버퍼,처음,끝)
                 byte[] buffer = (line + "\n").getBytes(charset);
                 bos.write(buffer, 0, buffer.length); // 아까는 read ->이번엔 write
             }
@@ -44,6 +48,21 @@ public class Ex02 {
             e.printStackTrace();
         }
     }
+
+    public static void copyWithFilesClass (String from, String newFileName) {
+        Path fromPath = Paths.get(from);
+        Path toPath = fromPath.getParent().resolve(Paths.get(newFileName));
+
+        try {
+            Files.copy(fromPath, toPath);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    //  💡 [Files]의 [copy 메소드]
+    //  - 내부적으로 Buffered...Stream 사용
+    //  - 보다 간결한 코드, 예외 처리 등 내부 처리 구현
+    //  - 실무에서 보다 권장
     public static void copyWithBis (String from, String newFileName) {
         Path fromPath = Paths.get(from);
         Path toPath = fromPath.getParent().resolve(Paths.get(newFileName));
